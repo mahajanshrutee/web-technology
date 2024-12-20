@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en" ng-app="dynamicApp">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0">
+<title>Dynamic Webpage</title>
+
+<!-- Bootstrap CSS -->
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap. min.css" rel="stylesheet" />
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- AngularJS -->
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.
+js"></script>
+
+<style>
+.content-box {
+border: 1px solid #ddd;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 5px;
+}
+</style>
+</head>
+
+<body ng-controller="MainController" class="bg-light">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">Dynamic Webpage</a>
+<button class="navbar-toggler" type="button" data-bs- toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link active" href="#">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#features">Features</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Header Section -->
+<header class="text-center py-5 bg-primary text-white">
+
+<h1>Welcome to Our Dynamic Webpage</h1>
+<p>Explore the best of modern web technologies.</p>
+</header>
+
+<!-- Features Section -->
+<div class="container my-5" id="features">
+<h2 class="mb-4">Features</h2>
+<div class="row">
+<div class="col-md-4" ng-repeat="feature in features">
+<div class="content-box">
+<h4> {{ feature.title }}</h4>
+<p> {{ feature.description }}</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Contact Section -->
+<div class="container my-5" id="contact">
+<h2 class="mb-4">Contact Us</h2>
+<form id="contactForm">
+<div class="mb-3">
+<label for="name" class="form-label">Name</label>
+<input type="text" class="form-control" id="name" required>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Email</label>
+
+<input type="email" class="form-control" id="email" required>
+</div>
+<div class="mb-3">
+<label for="message" class="form-label">Message</label>
+<textarea class="form-control" id="message" rows="4" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send
+Message</button>
+</form>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+<p> &copy; 2024 Dynamic Webpage. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap Bundle with Popper -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bu
+ndle.min.js"></script>
+
+<!-- AngularJS Controller -->
+<script>
+var app = angular.module('dynamicApp', []);
+app.controller('MainController', function($scope) {
+$scope.features = [
+{ title: 'Fast Performance', description: 'Experience lightning-fast
+load times.' },
+
+{ title: 'Responsive Design', description: 'Works seamlessly across all
+devices.' }, { title: 'User-Friendly UI', description: 'A sleek and intuitive user
+interface.' }
+];
+});
+</script>
+
+<!-- jQuery Script -->
+<script>
+$(document).ready(function () {
+// Submit form with jQuery
+$('#contactForm').submit(function (e) {
+e.preventDefault();
+const name = $('#name').val();
+const email = $('#email').val();
+const message = $('#message').val();
+
+// Display alert with form data
+alert(Message Sent!\nName: ${name}\nEmail: ${email}\nMessage:
+${message});
+});
+});
+</script>
+</body>
+</html>
