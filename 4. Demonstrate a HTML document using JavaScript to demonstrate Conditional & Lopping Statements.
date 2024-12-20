@@ -1,0 +1,83 @@
+demonstrate Conditional & Lopping Statements. <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0">
+<title>Conditional & Looping Statements</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+pre {
+background-color: #f4f4f4;
+
+padding: 10px;
+border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<h1>JavaScript Conditional & Looping Statements</h1>
+<h2>Results:</h2>
+<pre id="output"></pre>
+
+<script>
+// Initialize an output string
+let output = "";
+
+// Conditional Statements
+let number = 7;
+if (number > 0) {
+output += The number ${number} is positive.\n;
+} else if (number < 0) {
+output += The number ${number} is negative.\n;
+} else {
+output += The number is zero.\n;
+}
+
+// Using Switch Case
+const day = new Date().getDay();
+switch (day) {
+
+case 0:
+output += "Today is Sunday.\n";
+break;
+case 1:
+output += "Today is Monday.\n";
+break;
+case 2:
+output += "Today is Tuesday.\n";
+break;
+default:
+output += "Today is another day of the week.\n";
+}
+
+// Looping Statements
+// Using a for loop
+output += "\nCounting from 1 to 5 using a for loop:\n";
+for (let i = 1; i <= 5; i++) {
+output += i + " ";
+}
+
+// Using a while loop
+output += "\n\nCounting down from 5 to 1 using a while loop:\n";
+let countdown = 5;
+while (countdown > 0) {
+output += countdown + " ";
+countdown--;
+}
+
+// Using a do-while loop
+output += "\n\nPrinting 'Hello' 3 times using a do-while loop:\n";
+let count = 0;
+do {
+output += "Hello ";
+count++;
+} while (count < 3);
+
+// Display the output
+document.getElementById("output").textContent = output;
+</script>
+</body>
+</html>
