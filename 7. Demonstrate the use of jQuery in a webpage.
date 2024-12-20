@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0">
+<title>jQuery Example</title>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<style>
+#content {
+font-size: 18px;
+color: darkblue;
+}
+button {
+margin-top: 10px;
+padding: 10px 20px;
+background-color: blue;
+color: white;
+border: none;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to jQuery Example</h1>
+<div id="content">
+This is the original content. </div>
+
+<button id="changeContent">Change Content</button>
+
+<script>
+// jQuery script
+$(document).ready(function() {
+// When the button is clicked
+$('#changeContent').click(function() {
+// Change the text inside the #content div
+$('#content').text('This content has been changed using
+
+jQuery!');
+
+// Change the color
+$('#content').css('color', 'green');
+});
+});
+</script>
+</body>
+</html>
