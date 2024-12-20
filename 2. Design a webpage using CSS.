@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0">
+<title>Simple Webpage Design</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Welcome to My Webpage</h1>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<h2>Your Journey Begins Here</h2>
+<p>Discover more about our services and how we can help
+you.</p>
+<button>Learn More</button>
+</section>
+
+<section class="content">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">
+<h3>Web Design</h3>
+<p>Responsive and modern designs tailored to your
+
+needs.</p>
+</div>
+<div class="card">
+<h3>SEO Optimization</h3>
+<p>Improve your online visibility and search rankings.</p>
+</div>
+<div class="card">
+<h3>Digital Marketing</h3>
+<p>Effective strategies to grow your business online.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<p> &copy; 2024 My Webpage. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>
+
+Css Code :- * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+background-color: #333;
+
+color: #fff;
+padding: 1rem 0;
+}
+
+header .container {
+width: 80%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header h1 {
+font-size: 2rem;
+}
+
+header nav ul {
+list-style: none;
+display: flex;
+}
+
+header nav ul li {
+margin-left: 20px;
+}
+
+header nav ul li a {
+color: #fff;
+
+text-decoration: none;
+font-size: 1rem;
+}
+
+/* Main content */
+main {
+padding: 2rem 0;
+}
+
+.hero {
+background-color: #2196F3;
+color: white;
+text-align: center;
+padding: 2rem 0;
+}
+
+.hero h2 {
+font-size: 2.5rem;
+}
+
+.hero p {
+font-size: 1.2rem;
+margin-bottom: 1.5rem;
+}
+
+.hero button {
+padding: 0.8rem 2rem;
+
+background-color: #fff;
+color: #2196F3;
+border: none;
+font-size: 1rem;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.hero button:hover {
+background-color: #ccc;
+}
+
+/* Services section */
+.content {
+background-color: #fff;
+padding: 2rem 0;
+text-align: center;
+}
+
+.content h2 {
+font-size: 2rem;
+margin-bottom: 2rem;
+}
+
+.cards {
+display: flex;
+justify-content: space-around;
+
+gap: 20px;
+}
+
+.card {
+background-color: #f4f4f4;
+padding: 2rem;
+width: 30%;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.card p {
+font-size: 1rem;
+}
+
+/* Footer */
+footer {
+background-color: #333;
+color: #fff;
+padding: 1rem 0;
+text-align: center;
+}
+
+footer p {
+font-size: 1rem;
+}
